@@ -9,8 +9,8 @@ import custom from '../images/icon-fully-customizable.svg';
 function Content() {
     const [link, setLink] = useState("");
     const [links, setLinks] = useState({});
-    const [submitBtn, setSubmitBtn] = useState(false);
-
+    const [linkArr, setLinkArr] = useState([])
+    // const [submitBtn, setSubmitBtn] = useState(false);
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -25,6 +25,8 @@ function Content() {
             .then((data) => {
                 let returnedData = data;
                 setLinks(returnedData);
+                setLinkArr([...linkArr, returnedData])
+                console.log(linkArr)
                 console.log(returnedData)
             })
     }
