@@ -8,8 +8,11 @@ import instagram from '../images/icon-instagram.svg';
 function Footer() {
     return (
         <header>
-                <div className="bg-violet text-center">
+            <div className="bg-violet text-center lg:flex lg:justify-around">
+
+                <div>
                     <img src={logo} alt="" className="ml-32 pt-4 mb-6"/>
+                </div>    
 
                     <div>
                         <h3 className="text-white text-xl font-bold mt-4 mb-4">Features</h3>
@@ -46,7 +49,8 @@ function Footer() {
                         <img src={instagram} alt=""/>
                     </div>
 
-                </div>
+
+            </div>
         </header>
     )
 }

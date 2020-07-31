@@ -6,7 +6,7 @@ import Footer from './Components/Footer'
 
 function App() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden  md:mt-8">
       <Header></Header>
       <Content></Content>
       <Footer></Footer>
