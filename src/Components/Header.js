@@ -4,7 +4,7 @@ import background from '../images/illustration-working.svg'
 
 function Header() {
     return (
-        <div className="lg:ml-48">
+        <div className="ml-8 lg:ml-48">
                 <header>
                         <img src={logo} alt="Shortly logo" className="p-4"/>
                 </header>

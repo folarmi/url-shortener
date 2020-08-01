@@ -11,6 +11,9 @@ module.exports = {
       blue:'var(--color-neutral-blue)',
       violet:'var(--color-neutral-violet)'
     },
+    fontFamily:{
+      "poppins": ['sans-serif;']
+    }
   }
   },
   variants: {},

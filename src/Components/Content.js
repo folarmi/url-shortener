@@ -62,14 +62,14 @@ function Content() {
 
             <ul className="mt-8">
             {linkArr.map (link => (
-                <li key={link.objectID} className="lg:flex lg:ml-28 lg:justify-around lg:mb-16">
+                <li key={link.objectID} className="lg:flex lg:ml-28 lg:justify-around mb-8 lg:mb-16">
                        <li>{link.url}</li>
 
-                       <li ref={textAreaRef} 
+                       <textarea ref={textAreaRef} 
                             value={"https://rel.ink/" + link.hashid} 
                             onChange={e => setCopySuccess(e.target.value)}>
                             {"https://rel.ink/" + link.hashid}
-                       </li>
+                       </textarea>
 
                       <li> <button className="bg-cyan text-white font-bold rounded mt-4 w-32 p-2 lg:-mt-12" style={{
                         backgroundColor: (copySuccess === "Copy") ? 'hsl(180, 66%, 49%)' : ' hsl(257, 27%, 26%'
