@@ -53,28 +53,28 @@ function Content() {
         <div className="text-center">
 
             <form onSubmit={handleSubmit}>
-                <div className="bg-dark rounded-lg h-32 ml-6 mr-6 mt-18 lg:ml-40 lg:mt-10 lg:w-3/4">
+                <div className="bg-dark rounded-lg h-40 ml-6 mr-6 mt-18 lg:ml-40 lg:mt-10 lg:w-3/4">
                     <input type="text" label={'link'} name={'link'} placeholder="Shorten a link here" className="w-64 h-12 mt-8 rounded text-center lg:w-3/4" onChange={e => setLink(e.target.value)} />
 
                     <button className="bg-cyan hover:bg-blue-700 text-white font-bold rounded mt-4 w-32 p-2 lg:ml-6" type="submit">Shorten it!</button>
                 </div>
             </form>
 
-            <ul>
+            <ul className="mt-8">
             {linkArr.map (link => (
-                <li key={link.objectID}>
+                <li key={link.objectID} className="lg:flex lg:ml-28 lg:justify-around lg:mb-16">
                        <li>{link.url}</li>
 
-                       <textarea ref={textAreaRef} 
+                       <li ref={textAreaRef} 
                             value={"https://rel.ink/" + link.hashid} 
                             onChange={e => setCopySuccess(e.target.value)}>
                             {"https://rel.ink/" + link.hashid}
-                       </textarea>
+                       </li>
 
-                       <button className="bg-cyan text-white font-bold rounded mt-4 w-32 p-2" style={{
+                      <li> <button className="bg-cyan text-white font-bold rounded mt-4 w-32 p-2 lg:-mt-12" style={{
                         backgroundColor: (copySuccess === "Copy") ? 'hsl(180, 66%, 49%)' : ' hsl(257, 27%, 26%'
                        }}
-                       onClick={copyToClipboard}>{copySuccess}</button>
+                       onClick={copyToClipboard}>{copySuccess}</button> </li>
                 </li>
             ))}
             </ul>
